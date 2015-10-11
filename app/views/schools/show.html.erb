@@ -1,0 +1,35 @@
+<div class="container">
+  <% if notice %>
+    <div class="alert alert-success"><%= notice %></div>
+  <% end %>
+  
+  <p>
+    <strong>Name:</strong>
+    <%= @school.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @school.address %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @school.phone %>
+  </p>
+
+  <p>
+    <strong>Principal:</strong>
+    <%= @school.principal %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @school.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_school_path(@school), class: 'btn btn-info' %> 
+  <%= link_to 'Back', schools_path, class: 'btn btn-default' %>
+
+
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <% if notice %>
+    <div class="alert alert-success"><%= notice %></div>
+  <% end %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @program.name %>
+  </p>
+
+  <p>
+    <strong>Purpose:</strong>
+    <%= @program.purpose %>
+  </p>
+
+  <p>
+    <strong>Contact:</strong>
+    <%= @program.contact %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @program.phone %>
+  </p>
+
+  <p>
+    <strong>Cost:</strong>
+    <%= @program.cost %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @program.location %>
+  </p>
+
+  <%= link_to 'Edit', edit_program_path(@program), class: 'btn btn-info' %>
+  <%= link_to 'Back', programs_path, class: 'btn btn-default' %>
+</div>
