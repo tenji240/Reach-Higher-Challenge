@@ -1,0 +1,35 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <% if @schools.any? %>
+    <h3>All Schools</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Principal</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @schools.each do |school| %>
+          <tr>
+            <td><%= school.name %></td>
+            <td><%= school.address %></td>
+            <td><%= school.phone %></td>
+            <td><%= school.principal %></td>
+            <td><%= link_to 'Show', school, class: 'label label-primary' %></td>
+            <td><%= link_to 'Edit', edit_school_path(school), class: 'label label-info' %></td>
+            <td><%= link_to 'Destroy', school, class: 'label label-warning' ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h3>Add a new School</h3>
+  <% end %>
+  <hr>
+  <%= link_to 'New School', new_school_path, class: 'btn btn-success' %>
+</div>
